@@ -1,12 +1,12 @@
 # nlp-tweets-classification
 
-Hate Speech Classification Project
+# Hate Speech Classification Project
 
-Overview
+### Overview
 
 This project aims to develop machine learning models to classify hate speech, offensive language, and neutral tweets. The dataset used contains tweets labeled with one of three classes: hate speech, offensive language, or neither. The classification task is approached using both a one-model approach and a two-model approach. In the one-model approach, a single model is trained to classify tweets into all three classes. In the two-model approach, two separate models are trained: one to distinguish between neutral and bad language (offensive language and hate speech), and another to further classify bad language into offensive language and hate speech.
 
-Dataset
+### Dataset
 
 The dataset used for this project is a CSV file named labeled_data.csv, containing 24783 tweets with six columns:
 
@@ -22,28 +22,28 @@ neither: The count of ratings classifying the tweet as neither hate speech nor o
 
 count: The total count of ratings for the tweet.
 
-Methodology
+### Methodology
 
 The project follows these main steps:
 
-Data Preprocessing:
+#### Data Preprocessing:
 
 Compute tweet length and create a new feature.
 Remove tweets longer than 280 characters.
 Remove Twitter handles and preprocess text data.
 
-Exploratory Data Analysis (EDA):
+#### Exploratory Data Analysis (EDA):
 
 Visualize tweet length distribution by class.
 
 Analyze class distribution.
 
-Model Building:
+#### Model Building:
 
 Utilize various machine learning algorithms including Naive Bayes, Decision Tree, Random Forest, Support Vector Machine (SVM), and K Nearest Neighbors (KNN).
 Evaluate models using metrics such as confusion matrix and classification report.
 
-Two-Model Approach:
+### Two-Model Approach:
 Build separate models for classifying neutral language vs. bad language, and for further classifying bad language into offensive language vs. hate speech.
 
 Files Included:
@@ -54,7 +54,7 @@ labeled_data.csv: Dataset used for training and testing.
 
 README.md: Readme file providing an overview of the project, instructions, and details about the dataset and methodology.
 
-Instructions:
+### Instructions:
 
 Clone the repository to your local machine.
 Ensure you have Python installed along with necessary libraries (Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, etc.).
@@ -62,12 +62,12 @@ Run the code file to reproduce the analysis, train the models, and evaluate the 
 Follow along with the comments in the file for a detailed understanding of each step.
 Explore different models, hyperparameters, and feature engineering techniques for further experimentation and improvement.
 
-Results:
+### Results:
 
 The one-model approach achieved moderate performance, with Decision Tree Classifier being the best-performing algorithm.
 The two-model approach yielded better results, particularly with Support Vector Machines performing well for both Model 1 (neutral vs. bad language) and Model 2 (offensive language vs. hate speech).
 
-Conclusion:
+### Conclusion:
 
 Hate speech classification is a challenging task due to the nuanced nature of language and context.
 Model performance can be improved by experimenting with different algorithms, feature engineering, and data augmentation techniques.
