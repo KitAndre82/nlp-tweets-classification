@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
 import pandas as pd
 
 # Load dataset
@@ -162,7 +156,7 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import classification_report, confusion_matrix
 
 
-# ## Building models to classify the 3 groups
+# Building models to classify the 3 groups
 
 tweet_train,tweet_test,label_train,label_test=train_test_split(df_v2['tweet_edited_with_ratings'],
                                                            df_v2['class'],
@@ -188,7 +182,7 @@ print('\n')
 print(classification_report(label_test, predictions)) 
 
 
-# ### Decision Tree Classifier
+# Decision Tree Classifier
 
 pipeline = Pipeline([
     ('bow', CountVectorizer()),
@@ -206,7 +200,7 @@ print('\n')
 print(classification_report(label_test, predictions))      
 
 
-# ### Random Forest Classifier
+# Random Forest Classifier
 
 pipeline = Pipeline([
     ('bow', CountVectorizer()),
@@ -222,7 +216,7 @@ print('\n')
 print(classification_report(label_test, predictions))      
 
 
-# ### K Nearest neighbors
+# K Nearest neighbors
 
 from sklearn.neighbors import KNeighborsClassifier
 
@@ -241,7 +235,7 @@ print(confusion_matrix(label_test, predictions))
 print('\n')
 print(classification_report(label_test, predictions)) 
 
-# ### Support Vector Machine Algorithm
+# Support Vector Machine Algorithm
 
 from sklearn.svm import SVC
 
@@ -261,7 +255,7 @@ print('\n')
 print(classification_report(label_test, predictions))   
 
 
-# ### K Nearest Neighbors Classifier
+# K Nearest Neighbors Classifier
 
 # Bag of words used in all tweets are created
 # CountVectorizer class is used to transform the words into numeric values
@@ -431,7 +425,7 @@ print('\n')
 print(classification_report(label__test, predictions))      
 
 
-# ### Support Vector Machines Classifier
+# Support Vector Machines Classifier
 
 pipeline = Pipeline([
     ('bow', CountVectorizer()),
@@ -449,7 +443,7 @@ print('\n')
 print(classification_report(label__test, predictions))   
 
 
-# ### K Nearest Neighbors
+# K Nearest Neighbors
 
 tweet_train,tweet_test,label_train,label_test=train_test_split(tweets_tfidf,df_v3['class_new'],test_size=0.3,stratify=df_v3['class_new'])
 
@@ -487,11 +481,10 @@ print('\n')
 print(classification_report(label_test,pred))
 
 
-# ## Model Two
-# 
-# ### Classes are:
-# ### 0 - Offensive language 
-# ### 1 - Hateful speech
+# Model Two
+# Classes are:
+# 0 - Offensive language 
+# 1 - Hateful speech
 
 
 # Filtering dataset to include only offensive language and hateful speech rows
@@ -517,7 +510,7 @@ tweet__train,tweet__test,label__train,label__test=train_test_split(df_v4_filtere
                                                               stratify=df_v4_filtered['class_new'])
 
 
-# ### Naive Bayes Classifier
+# Naive Bayes Classifier
 
 pipeline = Pipeline([
     ('bow', CountVectorizer()),
@@ -535,7 +528,7 @@ print('\n')
 print(classification_report(label__test, predictions)) 
 
 
-# ### Decision Tree Classifier
+# Decision Tree Classifier
 
 pipeline = Pipeline([
     ('bow', CountVectorizer()),
@@ -553,7 +546,7 @@ print('\n')
 print(classification_report(label__test, predictions))      
 
 
-# ### Random Forest Classifier
+# Random Forest Classifier
 
 pipeline = Pipeline([
     ('bow', CountVectorizer()),
@@ -571,7 +564,7 @@ print('\n')
 print(classification_report(label__test, predictions))   
 
 
-# ### Support Vector Machines
+# Support Vector Machines
 
 pipeline = Pipeline([
     ('bow', CountVectorizer()),
